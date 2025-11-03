@@ -127,7 +127,7 @@ const Header: React.FC = () => {
         initial={{ x: '100%' }}
         animate={{ x: isMenuOpen ? 0 : '100%' }}
         transition={{ type: 'tween', duration: 0.3 }}
-        className="fixed top-0 right-0 h-full w-80 max-w-[90vw] bg-white shadow-2xl z-50 md:hidden"
+        className="fixed top-0 right-0 h-full w-80 max-w-[90vw] bg-white z-50 md:hidden"
       >
         <div className="flex flex-col h-full">
           {/* Mobile menu header */}
