@@ -100,7 +100,7 @@ const Footer: React.FC<FooterProps> = ({ onCalendarOpen }) => {
                         </div>
                     </div>
                      <p className="text-sm text-gray-500">
-                        Martex © 2025 &bull; A unit of Martex &bull; 
+                        Martx © 2025 &bull; A unit of Martx &bull; 
                     </p>
                 </motion.div>
 
