@@ -14,7 +14,7 @@ const Header: React.FC = () => {
     { name: 'Services', id: 'services' },
     { name: 'Process', id: 'process' },
     { name: 'Why Us', id: 'why-us' },
-    { name: 'Clients', id: 'clients' },
+    { name: 'Testimonials', id: 'testimonials' },
   ];
 
   const handleScroll = (id: string) => {
