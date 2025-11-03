@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChatbotIcon, CloseIcon, FaqIcon, PhoneIcon, UserIcon, SendIcon } from './Icons';
+import { ChatbotIcon, CloseIcon, FaqIcon, PhoneIcon, UserIcon, SendIcon, ArrowRightIcon } from './Icons';
 
 type View = 'menu' | 'chat' | 'faq' | 'callback';
 type Message = {
@@ -114,10 +114,13 @@ const ChatWidget: React.FC = () => {
         faq.a.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
-    const MenuButton = ({ icon: Icon, text, onClick }: { icon: React.ElementType, text: string, onClick: () => void }) => (
-        <button onClick={onClick} className="w-full flex items-center p-4 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
-            <Icon className="h-6 w-6 mr-4 text-gray-700" />
-            <span className="font-semibold text-gray-800">{text}</span>
+    const MenuButton = ({ icon: Icon, text, onClick, arrow }: { icon: React.ElementType, text: string, onClick: () => void, arrow?: React.ReactNode }) => (
+        <button onClick={onClick} className="w-full flex items-center justify-between p-4 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors group">
+            <div className="flex items-center">
+                <Icon className="h-6 w-6 mr-4 text-gray-700" />
+                <span className="font-semibold text-gray-800">{text}</span>
+            </div>
+            {arrow}
         </button>
     );
 
@@ -132,7 +135,7 @@ const ChatWidget: React.FC = () => {
                         </div>
                         <MenuButton icon={ChatbotIcon} text="Ask a question" onClick={() => setView('chat')} />
                         <MenuButton icon={FaqIcon} text="Search FAQs" onClick={() => setView('faq')} />
-                        <MenuButton icon={PhoneIcon} text="Request a callback" onClick={() => window.location.href = 'https://cal.com/martx-website'} />
+                        <MenuButton icon={PhoneIcon} text="Chat with Our Expert on WhatsApp" onClick={() => window.location.href = 'https://wa.me/918825566752'} arrow={<ArrowRightIcon className="h-4 w-4 transition-transform group-hover:translate-x-1" />} />
                     </div>
                 );
             case 'chat':

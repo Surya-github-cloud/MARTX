@@ -23,7 +23,7 @@ const itemVariants: Variants = {
 const WhoCanBenefitSection: React.FC = () => {
 
   const indiaLocations = ["Chennai", "Bangalore", "Mumbai", "Delhi", "Hyderabad"];
-  const worldwideLocations = ["USA", "UK", "UAE", "Singapore", "Australia", "Canada"];
+  const worldwideLocations = ["USA", "UK", "UAE", "Singapore", "Australia", "EU Countries"];
 
   return (
     <motion.section 

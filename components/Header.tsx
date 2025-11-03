@@ -153,7 +153,7 @@ const Header: React.FC = () => {
                 <button
                   key={item.name}
                   onClick={() => handleNavClick(item.id)}
-                  className="block w-full text-left text-lg font-medium text-gray-700 hover:text-black transition-colors py-3 px-4 rounded-lg hover:bg-gray-50"
+                  className="block w-full text-left text-lg font-medium text-gray-700 hover:text-black transition-colors py-3 px-4 rounded-lg bg-gray-50 hover:bg-gray-100"
                 >
                   {item.name}
                 </button>

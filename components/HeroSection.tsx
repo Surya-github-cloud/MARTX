@@ -43,7 +43,7 @@ const HeroSection: React.FC = () => {
 
   const openWhatsApp = () => {
     // Replace with your actual WhatsApp number in international format
-    window.open('https://wa.me/910000000000', '_blank');
+    window.open('https://wa.me/918825566752', '_blank');
   };
 
   return (
@@ -97,14 +97,14 @@ const HeroSection: React.FC = () => {
                     </div>
 
                     <p className="font-medium text-gray-800">
-                        You lose trust, leads, and opportunities. At M A R T X Premium Web Studio, we fix that—with premium websites, modern revamps, and AI-powered chatbots that make your site sell while you sleep.
+                        You lose trust, leads, and opportunities. At M A R T E X Premium Web Studio, we fix that—with premium websites, modern revamps, and AI-powered chatbots that make your site sell while you sleep.
                     </p>
                 </motion.div>
     
                 <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
                     <motion.button
-                        onClick={() => window.location.href = 'https://cal.com/martx-website'}
-                        className="group w-full sm:w-auto inline-flex items-center justify-center bg-black text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors"
+                        onClick={() => handleScroll('contact')}
+                        className="group w-full sm:w-auto inline-flex items-center justify-center whitespace-nowrap bg-black text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors"
                         whileHover={{ scale: 1.05, y: -2, transition: { type: 'spring', stiffness: 400, damping: 10 } }}
                         whileTap={{ scale: 0.95 }}
                     >
@@ -112,7 +112,7 @@ const HeroSection: React.FC = () => {
                     </motion.button>
                     <motion.button
                         onClick={openWhatsApp}
-                        className="group w-full sm:w-auto bg-white border border-gray-200 text-black font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+                        className="group w-full sm:w-auto inline-flex items-center justify-center whitespace-nowrap bg-white border border-gray-200 text-black font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
                         whileHover={{ scale: 1.05, y: -2, transition: { type: 'spring', stiffness: 400, damping: 10 } }}
                         whileTap={{ scale: 0.95 }}
                     >
