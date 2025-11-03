@@ -97,7 +97,7 @@ const HeroSection: React.FC = () => {
                     </div>
 
                     <p className="font-medium text-gray-800">
-                        You lose trust, leads, and opportunities. At M A R T E X Premium Web Studio, we fix that—with premium websites, modern revamps, and AI-powered chatbots that make your site sell while you sleep.
+                        You lose trust, leads, and opportunities. At M A R T X Premium Web Studio, we fix that—with premium websites, modern revamps, and AI-powered chatbots that make your site sell while you sleep.
                     </p>
                 </motion.div>
     
