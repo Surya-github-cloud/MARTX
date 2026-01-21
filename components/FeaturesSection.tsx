@@ -43,16 +43,37 @@ const featureVisuals: { [key: string]: React.ElementType } = {
     "Real Partnership": RealPartnershipVisual,
 };
 
+const videoMapping: { [key: string]: string } = {
+    "End-to-End Solution": "/end_to_end.mp4",
+    "Built to Convert": "/built_convert.mp4",
+    "Global Reach, Indian Expertise": "/global_reach.mp4",
+    "Transparent Communication": "/transparent_com.mp4",
+    "SEO + Performance Optimized": "/seo.mp4",
+    "Real Partnership": "/real_partnership.mp4",
+};
+
 const FeatureCard: React.FC<{ title: string, description: string, className?: string }> = ({ title, description, className }) => {
     const Visual = featureVisuals[title];
+    const videoSrc = videoMapping[title];
     return (
-        <motion.div 
+        <motion.div
             className={`bg-white p-6 rounded-3xl border border-gray-200 flex flex-col overflow-hidden group ${className}`}
             variants={{...itemVariants, hover: cardHoverVariant}}
             whileHover="hover"
         >
             <div className="h-56 mb-6 rounded-2xl overflow-hidden">
-                {Visual && <Visual />}
+                {videoSrc ? (
+                    <video
+                        src={videoSrc}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover"
+                    />
+                ) : (
+                    Visual && <Visual />
+                )}
             </div>
             <h3 className="text-xl font-semibold mb-2">{title}</h3>
             <p className="text-gray-600 flex-grow text-sm">{description}</p>
